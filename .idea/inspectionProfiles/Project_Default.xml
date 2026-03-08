@@ -1,0 +1,145 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="alsa-lib" />
+          <option value="aom" />
+          <option value="attr" />
+          <option value="blas" />
+          <option value="cairo" />
+          <option value="cudatoolkit" />
+          <option value="dav1d" />
+          <option value="dbus" />
+          <option value="expat" />
+          <option value="ffmpeg" />
+          <option value="fftw" />
+          <option value="filelock" />
+          <option value="fontconfig" />
+          <option value="freetype" />
+          <option value="fribidi" />
+          <option value="fsspec" />
+          <option value="gdk-pixbuf" />
+          <option value="gettext" />
+          <option value="gettext-tools" />
+          <option value="giflib" />
+          <option value="glib" />
+          <option value="glib-tools" />
+          <option value="glslang" />
+          <option value="gmp" />
+          <option value="gmpy2" />
+          <option value="graphite2" />
+          <option value="gstreamer-orc" />
+          <option value="gtest" />
+          <option value="harfbuzz" />
+          <option value="icu" />
+          <option value="importlib-metadata" />
+          <option value="intel-gmmlib" />
+          <option value="intel-media-driver" />
+          <option value="intel-openmp" />
+          <option value="jack" />
+          <option value="jinja2" />
+          <option value="jpeg" />
+          <option value="lame" />
+          <option value="lcms2" />
+          <option value="leptonica" />
+          <option value="lerc" />
+          <option value="libabseil" />
+          <option value="libarchive" />
+          <option value="libasprintf" />
+          <option value="libasprintf-devel" />
+          <option value="libass" />
+          <option value="libavif" />
+          <option value="libcap" />
+          <option value="libdeflate" />
+          <option value="libdrm" />
+          <option value="libegl" />
+          <option value="libflac" />
+          <option value="libgettextpo" />
+          <option value="libgettextpo-devel" />
+          <option value="libgl" />
+          <option value="libglib" />
+          <option value="libglvnd" />
+          <option value="libglx" />
+          <option value="libhwloc" />
+          <option value="libiconv" />
+          <option value="libltdl" />
+          <option value="libogg" />
+          <option value="libopenjpeg" />
+          <option value="libopus" />
+          <option value="libpciaccess" />
+          <option value="libpng" />
+          <option value="libprotobuf" />
+          <option value="librsvg" />
+          <option value="libsndfile" />
+          <option value="libtheora" />
+          <option value="libtiff" />
+          <option value="libtool" />
+          <option value="libtorch" />
+          <option value="libuv" />
+          <option value="libva" />
+          <option value="libvorbis" />
+          <option value="libvpl" />
+          <option value="libvpx" />
+          <option value="libwebp" />
+          <option value="libwebp-base" />
+          <option value="libxml2" />
+          <option value="lz4-c" />
+          <option value="markupsafe" />
+          <option value="mkl" />
+          <option value="mkl-service" />
+          <option value="mkl_fft" />
+          <option value="mkl_random" />
+          <option value="mpc" />
+          <option value="mpfr" />
+          <option value="mpg123" />
+          <option value="mpmath" />
+          <option value="networkx" />
+          <option value="numpy" />
+          <option value="numpy-base" />
+          <option value="openh264" />
+          <option value="openjpeg" />
+          <option value="opentelemetry-api" />
+          <option value="pango" />
+          <option value="pcre2" />
+          <option value="pillow" />
+          <option value="pixman" />
+          <option value="pulseaudio" />
+          <option value="pulseaudio-client" />
+          <option value="pulseaudio-daemon" />
+          <option value="pytorch" />
+          <option value="shaderc" />
+          <option value="sleef" />
+          <option value="soxr" />
+          <option value="spirv-tools" />
+          <option value="svt-av1" />
+          <option value="sympy" />
+          <option value="tbb" />
+          <option value="tbb-devel" />
+          <option value="tesseract" />
+          <option value="torchvision" />
+          <option value="typing-extensions" />
+          <option value="wayland" />
+          <option value="wayland-protocols" />
+          <option value="xorg-libice" />
+          <option value="xorg-libsm" />
+          <option value="xorg-libxext" />
+          <option value="xorg-libxfixes" />
+          <option value="xorg-libxi" />
+          <option value="xorg-libxrender" />
+          <option value="xorg-libxtst" />
+          <option value="zipp" />
+          <option value="zstd" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="scipy" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
