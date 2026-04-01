@@ -1,0 +1,601 @@
+{
+  "version": 1,
+  "source": "manual_relations_from_feature_definitions",
+  "strict_thresholds": {
+    "median_mape_pct_max": 0.5,
+    "p95_mape_pct_max": 2.0,
+    "coverage_pct_min": 80.0
+  },
+  "relations": [
+    {
+      "id": "R01_A17_from_A2",
+      "target_attr": "A17",
+      "operation": "reciprocal",
+      "inputs": [
+        "A2"
+      ],
+      "priority": 1,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A2",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "A17 = total assets / total liabilities = 1 / A2"
+    },
+    {
+      "id": "R02_A16_from_A15",
+      "target_attr": "A16",
+      "operation": "const_div",
+      "const": 365.0,
+      "inputs": [
+        "A15"
+      ],
+      "priority": 1,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A15",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "A16 = 365 / A15"
+    },
+    {
+      "id": "R03_A61_from_A44",
+      "target_attr": "A61",
+      "operation": "const_div",
+      "const": 365.0,
+      "inputs": [
+        "A44"
+      ],
+      "priority": 1,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A44",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "A61 = 365 / A44"
+    },
+    {
+      "id": "R04_A60_from_A20",
+      "target_attr": "A60",
+      "operation": "const_div",
+      "const": 365.0,
+      "inputs": [
+        "A20"
+      ],
+      "priority": 1,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A20",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "A60 = 365 / A20"
+    },
+    {
+      "id": "R05_A63_from_A62",
+      "target_attr": "A63",
+      "operation": "const_div",
+      "const": 365.0,
+      "inputs": [
+        "A62"
+      ],
+      "priority": 1,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A62",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "A63 = 365 / A62"
+    },
+    {
+      "id": "R06_A1_from_A23_A9",
+      "target_attr": "A1",
+      "operation": "mul",
+      "inputs": [
+        "A23",
+        "A9"
+      ],
+      "priority": 1,
+      "guards": [],
+      "notes": "A1 = A23 * A9"
+    },
+    {
+      "id": "R07_A18_from_A19_A9",
+      "target_attr": "A18",
+      "operation": "mul",
+      "inputs": [
+        "A19",
+        "A9"
+      ],
+      "priority": 1,
+      "guards": [],
+      "notes": "A18 = A19 * A9"
+    },
+    {
+      "id": "R08_A22_from_A42_A9",
+      "target_attr": "A22",
+      "operation": "mul",
+      "inputs": [
+        "A42",
+        "A9"
+      ],
+      "priority": 1,
+      "guards": [],
+      "notes": "A22 = A42 * A9"
+    },
+    {
+      "id": "R09_A14_from_A31_A9",
+      "target_attr": "A14",
+      "operation": "mul",
+      "inputs": [
+        "A31",
+        "A9"
+      ],
+      "priority": 1,
+      "guards": [],
+      "notes": "A14 = A31 * A9"
+    },
+    {
+      "id": "R10_A35_from_A39_A9",
+      "target_attr": "A35",
+      "operation": "mul",
+      "inputs": [
+        "A39",
+        "A9"
+      ],
+      "priority": 1,
+      "guards": [],
+      "notes": "A35 = A39 * A9"
+    },
+    {
+      "id": "R11_A48_from_A49_A9",
+      "target_attr": "A48",
+      "operation": "mul",
+      "inputs": [
+        "A49",
+        "A9"
+      ],
+      "priority": 1,
+      "guards": [],
+      "notes": "A48 = A49 * A9"
+    },
+    {
+      "id": "R12_A18_from_A12_A51",
+      "target_attr": "A18",
+      "operation": "mul",
+      "inputs": [
+        "A12",
+        "A51"
+      ],
+      "priority": 2,
+      "guards": [],
+      "notes": "A18 = A12 * A51"
+    },
+    {
+      "id": "R13_A2_from_A10",
+      "target_attr": "A2",
+      "operation": "one_minus",
+      "inputs": [
+        "A10"
+      ],
+      "priority": 3,
+      "guards": [],
+      "notes": "Balance-sheet identity candidate: A2 = 1 - A10"
+    },
+    {
+      "id": "AUTO_A2_from_A17_reciprocal",
+      "target_attr": "A2",
+      "operation": "reciprocal",
+      "inputs": [
+        "A17"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A17",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R01_A17_from_A2: A2 = 1 / A17",
+      "auto_generated": true,
+      "generated_from": "R01_A17_from_A2"
+    },
+    {
+      "id": "AUTO_A15_from_A16_const_div_365_0",
+      "target_attr": "A15",
+      "operation": "const_div",
+      "const": 365.0,
+      "inputs": [
+        "A16"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A16",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R02_A16_from_A15: A15 = 365.0 / A16",
+      "auto_generated": true,
+      "generated_from": "R02_A16_from_A15"
+    },
+    {
+      "id": "AUTO_A44_from_A61_const_div_365_0",
+      "target_attr": "A44",
+      "operation": "const_div",
+      "const": 365.0,
+      "inputs": [
+        "A61"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A61",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R03_A61_from_A44: A44 = 365.0 / A61",
+      "auto_generated": true,
+      "generated_from": "R03_A61_from_A44"
+    },
+    {
+      "id": "AUTO_A20_from_A60_const_div_365_0",
+      "target_attr": "A20",
+      "operation": "const_div",
+      "const": 365.0,
+      "inputs": [
+        "A60"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A60",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R04_A60_from_A20: A20 = 365.0 / A60",
+      "auto_generated": true,
+      "generated_from": "R04_A60_from_A20"
+    },
+    {
+      "id": "AUTO_A62_from_A63_const_div_365_0",
+      "target_attr": "A62",
+      "operation": "const_div",
+      "const": 365.0,
+      "inputs": [
+        "A63"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A63",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R05_A63_from_A62: A62 = 365.0 / A63",
+      "auto_generated": true,
+      "generated_from": "R05_A63_from_A62"
+    },
+    {
+      "id": "AUTO_A23_from_A1_A9_div",
+      "target_attr": "A23",
+      "operation": "div",
+      "inputs": [
+        "A1",
+        "A9"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A9",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R06_A1_from_A23_A9: A23 = A1 / A9",
+      "auto_generated": true,
+      "generated_from": "R06_A1_from_A23_A9"
+    },
+    {
+      "id": "AUTO_A9_from_A1_A23_div",
+      "target_attr": "A9",
+      "operation": "div",
+      "inputs": [
+        "A1",
+        "A23"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A23",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R06_A1_from_A23_A9: A9 = A1 / A23",
+      "auto_generated": true,
+      "generated_from": "R06_A1_from_A23_A9"
+    },
+    {
+      "id": "AUTO_A19_from_A18_A9_div",
+      "target_attr": "A19",
+      "operation": "div",
+      "inputs": [
+        "A18",
+        "A9"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A9",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R07_A18_from_A19_A9: A19 = A18 / A9",
+      "auto_generated": true,
+      "generated_from": "R07_A18_from_A19_A9"
+    },
+    {
+      "id": "AUTO_A9_from_A18_A19_div",
+      "target_attr": "A9",
+      "operation": "div",
+      "inputs": [
+        "A18",
+        "A19"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A19",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R07_A18_from_A19_A9: A9 = A18 / A19",
+      "auto_generated": true,
+      "generated_from": "R07_A18_from_A19_A9"
+    },
+    {
+      "id": "AUTO_A42_from_A22_A9_div",
+      "target_attr": "A42",
+      "operation": "div",
+      "inputs": [
+        "A22",
+        "A9"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A9",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R08_A22_from_A42_A9: A42 = A22 / A9",
+      "auto_generated": true,
+      "generated_from": "R08_A22_from_A42_A9"
+    },
+    {
+      "id": "AUTO_A9_from_A22_A42_div",
+      "target_attr": "A9",
+      "operation": "div",
+      "inputs": [
+        "A22",
+        "A42"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A42",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R08_A22_from_A42_A9: A9 = A22 / A42",
+      "auto_generated": true,
+      "generated_from": "R08_A22_from_A42_A9"
+    },
+    {
+      "id": "AUTO_A31_from_A14_A9_div",
+      "target_attr": "A31",
+      "operation": "div",
+      "inputs": [
+        "A14",
+        "A9"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A9",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R09_A14_from_A31_A9: A31 = A14 / A9",
+      "auto_generated": true,
+      "generated_from": "R09_A14_from_A31_A9"
+    },
+    {
+      "id": "AUTO_A9_from_A14_A31_div",
+      "target_attr": "A9",
+      "operation": "div",
+      "inputs": [
+        "A14",
+        "A31"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A31",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R09_A14_from_A31_A9: A9 = A14 / A31",
+      "auto_generated": true,
+      "generated_from": "R09_A14_from_A31_A9"
+    },
+    {
+      "id": "AUTO_A39_from_A35_A9_div",
+      "target_attr": "A39",
+      "operation": "div",
+      "inputs": [
+        "A35",
+        "A9"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A9",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R10_A35_from_A39_A9: A39 = A35 / A9",
+      "auto_generated": true,
+      "generated_from": "R10_A35_from_A39_A9"
+    },
+    {
+      "id": "AUTO_A9_from_A35_A39_div",
+      "target_attr": "A9",
+      "operation": "div",
+      "inputs": [
+        "A35",
+        "A39"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A39",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R10_A35_from_A39_A9: A9 = A35 / A39",
+      "auto_generated": true,
+      "generated_from": "R10_A35_from_A39_A9"
+    },
+    {
+      "id": "AUTO_A49_from_A48_A9_div",
+      "target_attr": "A49",
+      "operation": "div",
+      "inputs": [
+        "A48",
+        "A9"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A9",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R11_A48_from_A49_A9: A49 = A48 / A9",
+      "auto_generated": true,
+      "generated_from": "R11_A48_from_A49_A9"
+    },
+    {
+      "id": "AUTO_A9_from_A48_A49_div",
+      "target_attr": "A9",
+      "operation": "div",
+      "inputs": [
+        "A48",
+        "A49"
+      ],
+      "priority": 2,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A49",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R11_A48_from_A49_A9: A9 = A48 / A49",
+      "auto_generated": true,
+      "generated_from": "R11_A48_from_A49_A9"
+    },
+    {
+      "id": "AUTO_A12_from_A18_A51_div",
+      "target_attr": "A12",
+      "operation": "div",
+      "inputs": [
+        "A18",
+        "A51"
+      ],
+      "priority": 3,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A51",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R12_A18_from_A12_A51: A12 = A18 / A51",
+      "auto_generated": true,
+      "generated_from": "R12_A18_from_A12_A51"
+    },
+    {
+      "id": "AUTO_A51_from_A18_A12_div",
+      "target_attr": "A51",
+      "operation": "div",
+      "inputs": [
+        "A18",
+        "A12"
+      ],
+      "priority": 3,
+      "guards": [
+        {
+          "type": "nonzero",
+          "attr": "A12",
+          "eps": 1e-12
+        }
+      ],
+      "notes": "Auto inverse of R12_A18_from_A12_A51: A51 = A18 / A12",
+      "auto_generated": true,
+      "generated_from": "R12_A18_from_A12_A51"
+    },
+    {
+      "id": "AUTO_A10_from_A2_one_minus",
+      "target_attr": "A10",
+      "operation": "one_minus",
+      "inputs": [
+        "A2"
+      ],
+      "priority": 4,
+      "guards": [],
+      "notes": "Auto inverse of R13_A2_from_A10: A10 = 1 - A2",
+      "auto_generated": true,
+      "generated_from": "R13_A2_from_A10"
+    }
+  ],
+  "metadata": {
+    "inverse_generation": {
+      "added_relations": 20,
+      "input_relations": 13,
+      "output_relations": 33,
+      "supported_ops": [
+        "mul",
+        "reciprocal",
+        "const_div",
+        "one_minus"
+      ],
+      "generated_div_inverse": true
+    }
+  }
+}
